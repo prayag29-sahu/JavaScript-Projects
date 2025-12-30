@@ -44,6 +44,8 @@ function validateGuess(guess) {
     }
 }
 
+
+
 function checkGuess(guess) {
     if (guess === randomNumber) {
         displayMessage(`You guessed it right`);
@@ -55,6 +57,8 @@ function checkGuess(guess) {
     }
 }
 
+
+
 function displayGuess(guess) {
     userInput.value = '';
     guessSlot.innerHTML += `${guess}, `;
@@ -62,10 +66,11 @@ function displayGuess(guess) {
     remaining.innerHTML = `${11 - numGuess} `;
 }
 
+
+
 function displayMessage(message) {
     lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
-
 function endGame() {
     userInput.value = '';
     userInput.setAttribute('disabled', '');
@@ -75,8 +80,6 @@ function endGame() {
     playGame = false;
     newGame();
 }
-
-
 function newGame() {
     const newGameButton = document.querySelector('#newGame');
     newGameButton.addEventListener('click', function (e) {

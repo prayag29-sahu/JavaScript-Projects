@@ -7,6 +7,7 @@ const randomColor = function () {
     }
     return color;
 };
+
 let intervalId;
 const startChangingColor = function () {
     if (!intervalId) {
@@ -21,5 +22,7 @@ const stopChangingColor = function () {
     clearInterval(intervalId);
     intervalId = null;
 };
+
 document.querySelector('#start').addEventListener('click', startChangingColor);
+
 document.querySelector('#stop').addEventListener('click', stopChangingColor);
